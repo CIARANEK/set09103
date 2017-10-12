@@ -2,7 +2,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route("/account/", methods=['POST','GET'])
-def acount():
+def account():
   if request.method == 'POST':
     print request.form
     name = request.form['name']
@@ -19,5 +19,5 @@ def acount():
 
     return page
 
-if __name__ == "__main":
+if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)
